@@ -1,0 +1,101 @@
+/*
+LNK-MEDIA (lnk-media.js) - Javascript code for this CapLnk component.
+
+Copyright (C) 2014 by Gregory J Lamoree
+
+This file is part of the LNK-MEDIA component which is part of the
+CapLnk (Component - Application - Link) suite of components. 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+        Polymer('lnk-media', {
+           /**
+           * The `author` attribute sets an initial author
+           * 
+           * @attribute author
+           * @type string
+           * @default 'Gregory Lamoree'
+           */
+            author: 'Gregory J Lamoree',
+
+           /**
+           * `fancy` is a property that does something fancy.
+           * 
+           * @property fancy
+           * @type bool
+           * @default false
+           */
+            fancy: false,
+            
+
+           /**
+           * Publish Attributes that are complex data types.
+           */
+            publish: {
+                allValues: values
+            },
+            
+           /**
+           * Lifecycle Callback Methods
+           */
+            created: function() {
+            },
+            ready: function() {
+            },
+            attached: function () {
+            },
+            domReady: function() {
+            },
+            detached: function() {
+            },
+            attributeChanged: function(attrName, oldVal, newVal) {
+                //var newVal = this.getAttribute(attrName);
+                console.log(attrName, 'old: ' + oldVal, 'new:', newVal);        
+            },
+
+           /**
+           * The `sayHello` method will return a greeting.
+           * 
+           * @method sayHello
+           * @param {String} greeting Pass in a specific greeting.
+           * @return {String} Returns a string greeting.
+           */
+            sayHello: function(greeting) {
+
+                var response = greeting || 'Hello World!';
+                return 'lnk-media says, ' + response;
+            },
+
+           /**
+           * The `lnk-media-lasers-success` event is fired whenever we
+           * call fireLasers.
+           * 
+           * @event lnk-media-lasers-success
+           * @param {Object} detail
+           *   @param {string} detail.sound An amazing sound.
+           */
+
+           /**
+           * The `fireLasers` method will fire the lasers. At least
+           * it will dispatch an event that claims lasers were fired :)
+           * 
+           * @method fireLasers
+           */
+            fireLasers: function() {
+                this.fire('lnk-media-lasers-success', { sound: 'Pew pew pew!' });
+            }
+
+        });
+

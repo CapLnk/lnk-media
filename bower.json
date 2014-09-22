@@ -1,0 +1,23 @@
+{
+  "name": "lnk-media",
+  "version": "0.1.0",
+  "authors": [
+    "Anonymous <glamoree@randomminds.com>"
+  ],
+  "description": "CapLnk Component for a standized media query",
+  "keywords": "lnk-media, caplnk, polymer, web-components",
+  "main": "lnk-media.html",
+  "license": "LGPL V3",
+  "homepage": "https://github.com/CapLnk/lnk-media",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests",
+    ".bowerrc",
+    "*.*~"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
+    "polymer-test-tools": "Polymer/polymer-test-tools#>=0.4.0 <1.0.0"
+  }
+}

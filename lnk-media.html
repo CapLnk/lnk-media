@@ -1,0 +1,50 @@
+<!--
+LNK-MEDIA (lnk-media.html) - HTML code for this CapLnk component.
+
+Copyright (C) 2014 by Gregory J Lamoree
+
+This file is part of the LNK-MEDIA component which is part of the
+CapLnk (Component - Application - Link) suite of components. 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../lnk-globals/lnk-globals.html">
+
+<!--
+    Element providing solution to no problem in particular.
+    
+    ##### Example
+    
+        <lnk-media></lnk-media>
+    
+    @element lnk-media
+    @blurb Element providing Global Standardized Media Queries.
+    @status beta
+    @homepage http://polymerlabs.github.io/caplnk/lnk-media
+-->
+<polymer-element id="lnk-media" name="lnk-media" attributes="windowHeight windowWidth"
+                 tabletsize="44"
+                 everythingsize="0"
+                 wearablesize="18"
+                 phonesize="29"
+                 desktopsize="59"
+                 widescreensize="74"              
+                 >
+    <template>
+        <lnk-globals id="lnkGlobals" data-globals="[[attributes.is.value || nodeName]]" on-globalsready="{{globalsready}}"></lnk-globals>
+    </template>
+    <script src="lnk-media.js"></script>
+</polymer-element>
+
